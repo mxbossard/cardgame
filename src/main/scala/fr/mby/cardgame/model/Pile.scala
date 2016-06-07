@@ -1,16 +1,14 @@
 package fr.mby.cardgame.model
 
-import scala.util.Failure
-
 trait CardIterable extends Iterable[Card] {
   
-  def topToBottomIterator: Iterator[Card]
+  def topDownIterator: Iterator[Card]
   
-  def bottomToTopIterator: Iterator[Card]
+  def bottomUpIterator: Iterator[Card]
   
   def shuffleIterator: Iterator[Card]
   
-  def defaultIterator = topToBottomIterator
+  def defaultIterator = topDownIterator
   
   def iterator = defaultIterator
   
